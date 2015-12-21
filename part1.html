@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+	
+	<head>
+		<title>Dating Web Site Assessment</title>
+	</head>
+
+	<body>
+
+		<h2>Please enter your details for our dating website!</h2>
+
+		<form method="post" action="http://ihome.ust.hk/~rossiter/cgi-bin/show_everything.php" enctype="multipart/form-data">
+			<fieldset>
+				<legend>Your face</legend>
+
+				<label for="avatar">Your image:</label>
+				<input type="file" id="avatar" name="avatar" required>
+				<br>
+
+				<label for="preview">Image preview:</label>
+				<img id="preview">
+			</fieldset>
+
+			<fieldset>
+				<legend>Your general details</legend>
+
+				<label for="name">Name:</label>
+				<input type="text" id="name" name="name" required>
+				<br>
+
+				<label for="gender">Name:</label>
+				<input type="radio" id="gender1" name="gender" value="male" required>Male</input>
+				<input type="radio" id="gender2" name="gender" value="female" required>Female</input>
+				<br>
+
+				<label for="age">Age:</label>
+				<input type="number" id="age" name="age" required>
+				<br>
+
+				<label for="age">Date of birth:</label>
+				<input type="date" id="age" name="age">
+				<br>
+
+				<label for="color">Favorite color:</label>
+				<input type="color" id="color" name="color">
+				<br>
+
+				<label for="country">Which country:</label>
+				<select id="country" name="country" >
+				  <option value="null">No selection</option>
+				  <option value="us">United States</option>
+				  <option value="uk">United Kingdom</option>
+				  <option value="ukraine">Ukraine</option>
+				  <option value="norway">Norway</option>
+				  <option value="iceland">Iceland</option>
+				</select>
+				<br>
+			</fieldset>
+
+			<fieldset>
+				<legend>Your indicators</legend>
+
+				<label for="height">Height:</label>
+				<span>Short</span>
+				<input type="range" min="0" max="100" id="height" name="height" required>
+				<span>Tall</span>
+				<br>
+
+				<label for="salary">Salary:</label>
+				<span>Poor</span>
+				<input type="range" min="0" max="100" id="salary" name="salary" required>
+				<span>Rich</span>
+				<br>
+			</fieldset>
+
+			<fieldset>
+				<legend>Your Contact Information</legend>
+
+				<label for="email">E-mail:</label>
+				<input type="email" id="email" name="email" required>
+				<br>
+
+				<label for="tel">Mobile:</label>
+				<input type="tel" id="tel" name="tel">
+				<br>
+
+				<label for="address">Address:</label>
+				<textarea id="address" name="address"></textarea>
+				<br>
+
+				<label for="contact">Method to contact you</label>
+				<input type="checkbox" id="contact1" name="contact" value="email">E-mail</input>
+				<input type="checkbox" id="contact2" name="contact" value="whatsapp">Whatsapp</input>
+				<input type="checkbox" id="contact3" name="contact" value="inapp">In-app chat</input>
+				<br>
+			</fieldset>
+
+			<input type="submit">
+		</form>
+	</body>
+
+</html>
