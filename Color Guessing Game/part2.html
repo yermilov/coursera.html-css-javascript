@@ -37,7 +37,6 @@
 				guesses = 0;
 
 			    random_color_index = random_color_index();
-			    console.log(random_color_index);
 
 			    while (!finished) {
 			        guess_color = prompt("I am thinking of one of this colors:\n" + colors.join() + "\nWhat color am I thinking of?");
@@ -49,15 +48,21 @@
 			function check_guess(guess_color, random_color_index) {
 			    guess_index = colors.indexOf(guess_color);
 			    if (guess_index == -1) {
+			        alert("Sorry, I don't recognize color. Please try again.");
 			        return false;
 			    }
 			    if (guess_index > random_color_index) {
+			        alert("Sorry, your guess is not correct.\nHint: Your color is alphabetically higher than mine.\nPlease try again");
 			        return false;
 			    }
 			    if (guess_index < random_color_index) {
+			        alert("Sorry, your guess is not correct.\nHint: Your color is alphabetically lower than mine.\nPlease try again");
 			        return false;
 			    }
+			    alert("Congratulations! You guessed the color.\nIt took you " + guesses + " to finish the game.\n You can see the color in the background");
+
 			    document.getElementsByTagName("body")[0].style.background=colors[random_color_index];
+
 			    return true;   
 			}
 
